@@ -77,7 +77,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement receive function in Notification controller.`
     -   [x] Commit: `Implement list_messages function in Notification service.`
     -   [x] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -90,3 +90,8 @@ This is the place for you to write reflections:
 2. Aturan _ownership and borrowing_ Rust mencegah mutasi variabel status di luar konteks initialisasi mereka untuk mencegah adanya perbedaan data antar thread (_data races_) untuk memastikan keamanan thread
 
 #### Reflection Subscriber-2
+1. Saya sudah membaca secara sekilas isi kode dari `lib.rs` karena rasa penasaran saya terhadap file yang tidak kita modifikasi, tetapi ada di direktori aplikasi ini. Dari yang saya pahami, secara umum, `lib.rs` mengatur konfigurasi, handle error, dan membentuk aplikasi web dengan Rust menggunakan crate dan pattern yang sesuai.
+
+2. Observer Pattern memudahkan plug in banyak subscriber karena adanya pemisahan kode antara `Main App` dan `Receiver` sehingga penambahan receiver tidak perlu merubah main app nya. Pattern ini juga tetap akan memudahkan penambahan Main App karena setiap instance Main App memiliki list observernya masing-masing dan notifikasi perubahan akan diterima oleh observer masing-masing instance bukan oleh observer instance lainnya. Tetapi, jika kita ingin semua observer menerima notifikasi perubahan dari instance manapun, kita perlu memikirkan logika tambahan untuk sinkronisasi antar instance.
+
+3. Saya belum mencoba untuk membuat test sendiri ataupun mengembangkan dokumentasi Postman saya. Walaupun begitu, menurut saya, mengembangkan tes dan dokumentasi Postman untuk aplikasi saya akan membantu untuk memeriksa apakah response aplikasi terhadap suatu perilaku sudah benar dan apakah ada case yang terlewat, baik untuk tutorial maupun tugas kelompok.
