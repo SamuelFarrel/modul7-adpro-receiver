@@ -62,7 +62,7 @@ impl NotificationService{
         let product_type_str: &str = product_type_upper.as_str();
         let notification_receiver_url: String = format!("{}/receive",
             APP_CONFIG.get_instance_root_url());
-        let request_url: String = format!("{}/notificvation/unsubscribe/{}?url={}",
+        let request_url: String = format!("{}/notification/unsubscribe/{}?url={}",
             APP_CONFIG.get_publisher_root_url(), product_type_str, notification_receiver_url);
         let request = REQWEST_CLIENT
             .post(request_url.clone())
