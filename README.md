@@ -66,7 +66,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Create Notification database and Notification repository struct skeleton.`
     -   [x] Commit: `Implement add function in Notification repository.`
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
@@ -85,5 +85,8 @@ This is the place for you to write reflections:
 ### Mandatory (Subscriber) Reflections
 
 #### Reflection Subscriber-1
+1. Karena `Mutex<>` hanya dapat diakses datanya oleh satu thread pada satu waktu, sedangkan `RwLock<>` memungkinkan untuk dibaca datanya oleh beberapa thread dalam satu waktu (_allows multiple OR single reader_). Jadi, untuk skenario pembacaan notification yang sering diakses oleh beberapa thread sekaligus, penggunaan `RwLock<>` lebih cocok untuk digunakan
+
+2. Aturan _ownership and borrowing_ Rust mencegah mutasi variabel status di luar konteks initialisasi mereka untuk mencegah adanya perbedaan data antar thread (_data races_) untuk memastikan keamanan thread
 
 #### Reflection Subscriber-2
